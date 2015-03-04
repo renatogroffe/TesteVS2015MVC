@@ -1,0 +1,14 @@
+{
+  "name": "open-weather",
+  "homepage": "https://github.com/michael-lynch/open-weather",
+  "version": "1.2.0",
+  "_release": "1.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.2.0",
+    "commit": "7a384efb1f55994d7fb3cbf347c2cf26ddf33be7"
+  },
+  "_source": "git://github.com/michael-lynch/open-weather.git",
+  "_target": "~1.2.0",
+  "_originalSource": "open-weather"
+}

@@ -1,0 +1,57 @@
+﻿<style type="text/css">
+    .infoTemperatura {
+        background-color: lightblue;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        width: 400px;
+    }
+
+    .legendaClima {
+        font-size: 26pt;
+        padding-top: 30px;
+    }
+</style>
+
+<br />
+
+<div class="infoTemperatura">
+
+    <img src="" class="icone-clima" alt="Weather Icon" />
+
+    <p class="legendaClima">
+        <strong>Localidade</strong>
+        <br /><span class="localidade"></span>
+    </p>
+
+    <p class="legendaClima">
+        <strong>Temperatura</strong>
+        <br /><span class="temperatura"></span>
+        (<span class="temperatura-minima"></span> -
+        <span class="temperatura-maxima"></span>)
+    </p>
+
+    <p class="legendaClima">
+        <strong>Umidade</strong>
+        <br /><span class="umidade"></span>
+    </p>
+
+</div>
+
+<script src="~/lib/open-weather/js/openWeather.js"></script>
+
+<script>
+
+	$('.temperatura').openWeather({
+		city: '@ViewBag.ReferenciaCidade',
+	    minTemperatureTarget: '.temperatura-minima',
+	    maxTemperatureTarget: '.temperatura-maxima',
+		humidityTarget: '.umidade',
+		placeTarget: '.localidade',
+		iconTarget: '.icone-clima',
+		customIcons: '/lib/open-weather/img/icons/weather/',
+		success: function () {
+		    $('.infoTemperatura').show();
+		}
+	});
+
+</script>

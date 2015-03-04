@@ -1,0 +1,10 @@
+﻿@using Microsoft.Framework.ConfigurationModel
+@inject IConfiguration config
+
+<div style="width: 100%;">
+    <center>
+        @Component.Invoke("ClimaCidade", config.Get("Teste:Cidade2"))
+        <br />
+        <a asp-controller="Home" asp-action="Index">Voltar</a>
+    </center>
+</div>

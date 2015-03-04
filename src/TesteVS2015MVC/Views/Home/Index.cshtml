@@ -1,0 +1,25 @@
+﻿@{
+    string cidade1 = ViewBag.Cidade1;
+}
+
+<div class="jumbotron">
+    <h1>ASP.NET 5</h1>
+    <p class="lead">
+        Exemplo de aplicação construída com o
+        framework ASP.NET MVC 6.
+    </p>
+</div>
+
+<div style="font-size: 20px; height: 150px;">
+    Consulta a informações climáticas - selecione uma cidade:
+    <ul>
+        <li>
+            @Html.ActionLink(cidade1, "Cidade1", "Cidade")
+        </li>
+        <li>
+            <a asp-controller="Cidade" asp-action="Cidade2">
+                @ViewBag.Cidade2
+            </a>
+        </li>
+    </ul>
+</div>
